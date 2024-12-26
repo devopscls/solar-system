@@ -1,7 +1,11 @@
 name: Testing nodejs projects
 
-on: [push]
-
+on:
+   workflow_dispatch:
+   push:
+     branches:
+      - main
+       
 env:
     MONGO_URI: 'mongodb://54.198.237.117:27017/solar_system'
     MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
