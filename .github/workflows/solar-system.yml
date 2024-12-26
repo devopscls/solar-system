@@ -8,7 +8,7 @@ on:
       - 'feature/*'
 
 env:
-    MONGO_URI: 'mongodb://18.206.246.53:27017/solar_system'
+    MONGO_URI: ''
     MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
     MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
     
@@ -35,5 +35,5 @@ jobs:
           uses: actions/upload-artifact@v3
           with:
             name: Mocha-Test-Result
-            path: *.xml
+            path: test-results.xml
             
