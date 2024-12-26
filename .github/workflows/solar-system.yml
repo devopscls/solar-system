@@ -9,8 +9,8 @@ on:
 
 env:
     MONGO_URI: 'mongodb://18.206.246.53:27017/solar_system'
-    MONGO_USERNAME: 'admin'
-    MONGO_PASSWORD: 'admin'
+    MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
+    MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
     
 jobs:
     unit-testing:
