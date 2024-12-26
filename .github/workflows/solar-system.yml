@@ -6,6 +6,11 @@ on:
     branches:
       - main
       - 'feature/*'
+
+env:
+    MONGO_URI: 'mongodb://18.206.246.53:27017/solar_system'
+    MONGO_USERNAME: admin
+    MONGO_PASSWORD: admin
     
 jobs:
     unit-testing:
